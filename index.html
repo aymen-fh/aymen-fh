@@ -353,7 +353,12 @@
 
     function loadTasks() {
       try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw === null) {
+          state.tasks = [];
+          return;
+        }
+        const saved = JSON.parse(raw);
         state.tasks = Array.isArray(saved) ? saved : [];
       } catch {
         state.tasks = [];
@@ -376,7 +381,8 @@
     }
 
     function loadFallbackCounter() {
-      const value = Number(localStorage.getItem(COUNTER_KEY));
+      const stored = localStorage.getItem(COUNTER_KEY);
+      const value = stored === null ? NaN : Number(stored);
       fallbackIdCounter = Number.isFinite(value) && value > 0 ? value : 0;
     }
 
@@ -414,6 +420,7 @@
       selection.removeAllRanges();
       selection.addRange(range);
       let isFinished = false;
+      let onKeyDown = () => {};
 
       const finishEdit = () => {
         if (isFinished) return;
@@ -429,7 +436,7 @@
         saveTasks();
       };
 
-      const onKeyDown = event => {
+      onKeyDown = event => {
         if (event.key === "Enter") {
           event.preventDefault();
           finishEdit();
@@ -467,8 +474,6 @@
           emptyState.textContent = "No active tasks. Great work!";
         } else if (state.filter === "completed") {
           emptyState.textContent = "No completed tasks yet.";
-        } else {
-          emptyState.textContent = "No tasks match the current filter.";
         }
       }
 
