@@ -420,7 +420,7 @@
       selection.removeAllRanges();
       selection.addRange(range);
       let isFinished = false;
-      let onKeyDown = () => {};
+      let onKeyDown;
 
       const finishEdit = () => {
         if (isFinished) return;
@@ -454,8 +454,8 @@
     }
 
     function createTaskId() {
-      if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
-        return crypto.randomUUID();
+      if (globalThis.crypto?.randomUUID) {
+        return globalThis.crypto.randomUUID();
       }
       fallbackIdCounter += 1;
       saveFallbackCounter();
