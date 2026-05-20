@@ -397,8 +397,13 @@
     function startEdit(textEl, taskId) {
       textEl.setAttribute("contenteditable", "true");
       textEl.focus();
+      let isFinished = false;
 
       const finishEdit = () => {
+        if (isFinished) return;
+        isFinished = true;
+        textEl.removeEventListener("blur", finishEdit);
+        textEl.removeEventListener("keydown", onKeyDown);
         textEl.setAttribute("contenteditable", "false");
         const value = textEl.textContent.trim();
         const task = state.tasks.find(item => item.id === taskId);
@@ -411,16 +416,25 @@
       const onKeyDown = event => {
         if (event.key === "Enter") {
           event.preventDefault();
+          finishEdit();
           textEl.blur();
         } else if (event.key === "Escape") {
           const task = state.tasks.find(item => item.id === taskId);
           textEl.textContent = task ? task.text : textEl.textContent;
+          finishEdit();
           textEl.blur();
         }
       };
 
-      textEl.addEventListener("blur", finishEdit, { once: true });
-      textEl.addEventListener("keydown", onKeyDown, { once: true });
+      textEl.addEventListener("blur", finishEdit);
+      textEl.addEventListener("keydown", onKeyDown);
+    }
+
+    function createTaskId() {
+      if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+        return crypto.randomUUID();
+      }
+      return `task-${Date.now()}-${Math.random().toString(16).slice(2)}`;
     }
 
     function renderTasks() {
@@ -492,7 +506,7 @@
       if (!text) return;
 
       state.tasks.unshift({
-        id: crypto.randomUUID(),
+        id: createTaskId(),
         text,
         completed: false
       });
