@@ -4,16 +4,14 @@
   
   <br><br>
   
-  <!-- Connect With Me (Moved Under Name) -->
+  <!-- Typing Animation -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Building+Scalable+Applications...;Mobile+Development+with+Flutter...;Backend+Engineering+%26+System+Design...;Learning+Go+%26+DevOps..."/>
+  <br>
+  <!-- Connect With Me (Moved Under Typing Animation with no space) -->
   <a href="https://linkedin.com/in/aymen-farhat"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://instagram.com/aymen._fh"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
   <a href="mailto:aymnfrhat778@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://discord.gg/aymenfh_10"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a>
-
-  <br><br>
-
-  <!-- Typing Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Building+Scalable+Applications...;Mobile+Development+with+Flutter...;Backend+Engineering+%26+System+Design...;Learning+Go+%26+DevOps..."/>
 </div>
 
 <br><br>
