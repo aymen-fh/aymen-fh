@@ -16,7 +16,7 @@
 
 <br><br>
 
-## 👨‍💻 About Me
+## About Me
 
 <img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwcmNidm14bW10Zmw4Y3V5Y3F5NjZndW43Ym15M200b3R0ZTRwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmU08A4ZscXoQ/giphy.gif" width="28%" style="border-radius: 12px; margin-left: 15px;" />
 
@@ -30,7 +30,7 @@ Hi there! I am a passionate **Full Stack & Mobile Developer** based in **Libya �
 <br clear="both">
 <br>
 
-## 🚀 Tech Stack:
+## Tech Stack:
 
 <p align="left">
   <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" />
@@ -42,17 +42,15 @@ Hi there! I am a passionate **Full Stack & Mobile Developer** based in **Libya �
   <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
   <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
   <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" />
 </p>
 
 <br>
 
-## 📊 GitHub Analytics:
+## GitHub Analytics:
 
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=aymen-fh&show_icons=true&theme=transparent&hide_border=true&title_color=58A6FF&text_color=c9d1d9&icon_color=58A6FF" width="48%" />
