@@ -304,7 +304,7 @@
         <h1 class="title">To-Do List</h1>
         <p class="muted">Track your tasks with localStorage persistence.</p>
       </div>
-      <button id="themeToggle" class="toggle-theme" type="button" aria-label="Toggle dark mode">🌙 Dark</button>
+      <button id="themeToggle" class="toggle-theme" type="button" aria-label="Switch to dark mode">🌙 Dark</button>
     </header>
 
     <section class="add-row">
@@ -314,7 +314,7 @@
 
     <section class="toolbar">
       <div id="counters" class="counters" aria-live="polite"></div>
-      <div class="filters" role="tablist" aria-label="Task filters">
+      <div class="filters" aria-label="Task filters">
         <button type="button" data-filter="all" class="active">All</button>
         <button type="button" data-filter="active">Active</button>
         <button type="button" data-filter="completed">Completed</button>
@@ -374,7 +374,7 @@
       const dark = savedTheme === "dark";
       document.body.classList.toggle("dark", dark);
       themeToggle.textContent = dark ? "☀️ Light" : "🌙 Dark";
-      themeToggle.setAttribute("aria-label", dark ? "Toggle light mode" : "Toggle dark mode");
+      themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
     }
 
     function saveTheme() {
@@ -418,8 +418,10 @@
       const range = document.createRange();
       range.selectNodeContents(textEl);
       const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
+      if (selection) {
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
       let isFinished = false;
       let onKeyDown;
 
@@ -455,8 +457,8 @@
     }
 
     function createTaskId() {
-      if (typeof globalThis.crypto?.randomUUID === "function") {
-        return globalThis.crypto.randomUUID();
+      if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+        return crypto.randomUUID();
       }
       fallbackIdCounter += 1;
       saveFallbackCounter();
@@ -487,7 +489,7 @@
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
-        checkbox.setAttribute("aria-label", `Mark task '${task.text}' as ${task.completed ? "incomplete" : "complete"}`);
+        checkbox.setAttribute("aria-label", `Mark task ${task.text} as ${task.completed ? "incomplete" : "complete"}`);
         checkbox.addEventListener("change", () => toggleTask(task.id));
 
         const text = document.createElement("span");
@@ -591,7 +593,7 @@
       document.body.classList.toggle("dark");
       const dark = document.body.classList.contains("dark");
       themeToggle.textContent = dark ? "☀️ Light" : "🌙 Dark";
-      themeToggle.setAttribute("aria-label", dark ? "Toggle light mode" : "Toggle dark mode");
+      themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
       saveTheme();
     });
 
