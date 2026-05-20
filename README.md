@@ -1,8 +1,8 @@
 <div align="center">
-  <!-- Header Banner (Fixed URL + Supported Type) -->
+  <!-- Animated Header Banner -->
   <img
     width="100%"
-    src="https://capsule-render.vercel.app/api?type=cylinder&amp;height=160&amp;color=0:0b1b3a,100:2b64ff&amp;text=Aymen%20Farhat&amp;fontColor=ffffff&amp;fontSize=44&amp;animation=fadeIn&amp;desc=Full%20Stack%20%26%20Mobile%20Developer&amp;descAlignY=75&amp;descSize=16"
+    src="https://capsule-render.vercel.app/api?type=waving&amp;height=180&amp;color=0:0f172a,100:3b82f6&amp;text=Aymen%20Farhat&amp;fontColor=ffffff&amp;fontSize=48&amp;animation=twinkling&amp;desc=Full%20Stack%20%26%20Mobile%20Developer&amp;descAlignY=75&amp;descSize=18"
     alt="Aymen Farhat Banner"
   />
 
@@ -10,11 +10,11 @@
 
   <!-- Typing Animation -->
   <img
-    src="https://readme-typing-svg.demolab.com?font=Poppins&amp;weight=600&amp;size=24&amp;pause=800&amp;color=2B64FF&amp;center=true&amp;vCenter=true&amp;width=720&amp;lines=Building+Modern+Mobile+Apps;Designing+Scalable+Backends;Crafting+Smooth+User+Experiences"
+    src="https://readme-typing-svg.demolab.com?font=Poppins&amp;weight=700&amp;size=24&amp;pause=900&amp;color=3B82F6&amp;center=true&amp;vCenter=true&amp;width=720&amp;lines=Building+Modern+Mobile+%26+Backend+Apps;Flutter+%7C+Laravel+%7C+Node.js;Always+Learning+%26+Exploring"
     alt="Typing SVG"
   />
 
-  <br>
+  <br><br>
 
   <!-- Connect With Me -->
   <div>
@@ -39,7 +39,7 @@
 
 ## 👤 About Me
 
-<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwcmNidm14bW10Zmw4Y3V5Y3F5NjZndW43Ym15M200b3R0ZTRwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmU08A4ZscXoQ/giphy.gif" width="350" style="border-radius: 15px;" />
+<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwcmNidm14bW10Zmw4Y3V5Y3F5NjZndW43Ym15M200b3R0ZTRwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmU08A4ZscXoQ/giphy.gif" width="350" style="border-radius: 15px; animation: slideInRight 1s ease;" />
 
 I'm a passionate **Full Stack & Mobile Developer** from **Libya 🇱🇾**, dedicated to creating clean, scalable, and user-friendly solutions. I thrive on solving complex problems and staying at the forefront of technology.
 
