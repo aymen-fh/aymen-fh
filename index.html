@@ -302,7 +302,7 @@
     <header class="header">
       <div>
         <h1 class="title">To-Do List</h1>
-        <p class="muted">Track your tasks with local storage persistence.</p>
+        <p class="muted">Track your tasks with localStorage persistence.</p>
       </div>
       <button id="themeToggle" class="toggle-theme" type="button" aria-label="Toggle dark mode">🌙 Dark</button>
     </header>
@@ -338,6 +338,7 @@
       tasks: [],
       filter: "all"
     };
+    let fallbackIdCounter = 0;
 
     const taskInput = document.getElementById("taskInput");
     const addTaskBtn = document.getElementById("addTaskBtn");
@@ -434,7 +435,8 @@
       if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
         return crypto.randomUUID();
       }
-      return `task-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      fallbackIdCounter += 1;
+      return `task-${Date.now()}-${fallbackIdCounter}`;
     }
 
     function renderTasks() {
@@ -544,7 +546,10 @@
 
     addTaskBtn.addEventListener("click", addTask);
     taskInput.addEventListener("keydown", event => {
-      if (event.key === "Enter") addTask();
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addTask();
+      }
     });
 
     clearCompletedBtn.addEventListener("click", clearCompleted);
