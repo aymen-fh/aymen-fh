@@ -1,30 +1,35 @@
 <div align="center">
-  <!-- Modern Animated Header -->
-  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px; border-radius: 20px; animation: fadeInDown 0.8s ease;">
-    <h1 style="color: white; font-size: 3.5em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: slideInRight 0.8s ease;">Aymen Farhat</h1>
-    <p style="color: rgba(255,255,255,0.9); font-size: 1.2em; margin-top: 10px; animation: slideInLeft 0.8s ease 0.2s both;">Full Stack & Mobile Developer</p>
-  </div>
-  
+  <!-- New Header Banner (Updated Style + Animation) -->
+  <img
+    width="100%"
+    src="https://capsule-render.vercel.app/api?type=rounded&height=160&color=0:0b1b3a,100:2b64ff&text=Aymen%20Farhat&fontColor=ffffff&fontSize=44&animation=twinkling&desc=Full%20Stack%20%26%20Mobile%20Developer&descAlignY=75&descSize=16"
+    style="animation: floatY 4s ease-in-out infinite;"
+    alt="Aymen Farhat Banner"
+  />
+
   <br><br>
-  
-  <!-- Animated Typing Effect -->
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&pause=1000&color=667eea&center=true&vCenter=true&width=600&lines=💻+Building+Scalable+Applications;📱+Mobile+Development+Expert;🚀+Backend+Architecture+Enthusiast;🎨+Crafting+Beautiful+UIs" alt="Typing SVG" />
-  
-  <br><br>
-  
-  <!-- Social Badges with Hover Effect -->
-  <div style="animation: fadeInUp 0.8s ease 0.4s both;">
+
+  <!-- New Typing Animation (Different Style) -->
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&pause=800&color=2B64FF&center=true&vCenter=true&width=720&lines=Building+Modern+Mobile+Apps;Designing+Scalable+Backends;Crafting+Smooth+User+Experiences"
+    alt="Typing SVG"
+  />
+
+  <br>
+
+  <!-- Connect With Me -->
+  <div style="animation: popIn 0.9s ease 0.3s both;">
     <a href="https://linkedin.com/in/aymen-farhat">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&logoWidth=20" alt="LinkedIn" style="margin: 5px; transition: transform 0.3s;" />
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
     </a>
     <a href="https://instagram.com/aymen._fh">
-      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&logoWidth=20" alt="Instagram" style="margin: 5px; transition: transform 0.3s;" />
+      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
     </a>
     <a href="mailto:aymnfrhat778@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&logoWidth=20" alt="Gmail" style="margin: 5px; transition: transform 0.3s;" />
+      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
     </a>
     <a href="https://discord.gg/aymenfh_10">
-      <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white&logoWidth=20" alt="Discord" style="margin: 5px; transition: transform 0.3s;" />
+      <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" />
     </a>
   </div>
 </div>
@@ -35,7 +40,7 @@
 
 ## 👤 About Me
 
-<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwcmNidm14bW10Zmw4Y3V5Y3F5NjZndW43Ym15M200b3R0ZTRwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmU08A4ZscXoQ/giphy.gif" width="350" style="border-radius: 15px; animation: slideInRight 1s ease;" />
+<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwcmNidm14bW10Zmw4Y3V5Y3F5NjZndW43Ym15M200b3R0ZTRwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmU08A4ZscXoQ/giphy.gif" width="350" style="border-radius: 15px;" />
 
 I'm a passionate **Full Stack & Mobile Developer** from **Libya 🇱🇾**, dedicated to creating clean, scalable, and user-friendly solutions. I thrive on solving complex problems and staying at the forefront of technology.
 
@@ -105,47 +110,20 @@ I'm a passionate **Full Stack & Mobile Developer** from **Libya 🇱🇾**, dedi
 </div>
 
 <style>
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  @keyframes floatY {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
   }
-  
-  @keyframes slideInRight {
+
+  @keyframes popIn {
     from {
       opacity: 0;
-      transform: translateX(-30px);
+      transform: scale(0.95);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
   }
 </style>
