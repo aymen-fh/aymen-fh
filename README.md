@@ -1,10 +1,10 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=150&text=Aymen%20Farhat&font=Cinzel+Decorative&fontColor=9DD9FF&fontSize=52&animation=fadeIn&fontAlignY=38&color=0:020617,50:071426,100:0B2447"/>
+<img width="100%" src="Wallpaper.jpg"/>
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=900&color=7DD3FC&center=true&vCenter=true&width=750&lines=Full+Stack+%26+Mobile+Developer;Flutter+%7C+Laravel+%7C+Node.js;Always+Learning+New+Things"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=900&color=7DD3FC&center=true&vCenter=true&width=750&lines=Full+Stack+%26+Mobile+Developer;Flutter+%7C+Laravel+%7C+Node.js;Build+Beautiful+Apps+%26+Backends;Always+Learning+%26+Building"/>
 
 <div align="center">
 
