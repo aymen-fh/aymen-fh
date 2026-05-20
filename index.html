@@ -308,7 +308,7 @@
     </header>
 
     <section class="add-row">
-      <input id="taskInput" class="task-input" type="text" placeholder="Add a new task..." maxlength="200" aria-label="Task text" />
+      <input id="taskInput" class="task-input" type="text" placeholder="Add a new task..." maxlength="200" aria-label="Enter task to add" />
       <button id="addTaskBtn" class="btn" type="button">Add Task</button>
     </section>
 
@@ -374,6 +374,7 @@
       const dark = savedTheme === "dark";
       document.body.classList.toggle("dark", dark);
       themeToggle.textContent = dark ? "☀️ Light" : "🌙 Dark";
+      themeToggle.setAttribute("aria-label", dark ? "Toggle light mode" : "Toggle dark mode");
     }
 
     function saveTheme() {
@@ -454,7 +455,7 @@
     }
 
     function createTaskId() {
-      if (globalThis.crypto?.randomUUID) {
+      if (typeof globalThis.crypto?.randomUUID === "function") {
         return globalThis.crypto.randomUUID();
       }
       fallbackIdCounter += 1;
@@ -486,7 +487,7 @@
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
-        checkbox.setAttribute("aria-label", `Toggle task ${task.text}`);
+        checkbox.setAttribute("aria-label", `Mark task '${task.text}' as ${task.completed ? "incomplete" : "complete"}`);
         checkbox.addEventListener("change", () => toggleTask(task.id));
 
         const text = document.createElement("span");
@@ -501,12 +502,14 @@
         const editBtn = document.createElement("button");
         editBtn.type = "button";
         editBtn.textContent = "Edit";
+        editBtn.setAttribute("aria-label", `Edit task ${task.text}`);
         editBtn.addEventListener("click", () => startEdit(text, task.id));
 
         const deleteBtn = document.createElement("button");
         deleteBtn.type = "button";
         deleteBtn.className = "danger";
         deleteBtn.textContent = "Delete";
+        deleteBtn.setAttribute("aria-label", `Delete task ${task.text}`);
         deleteBtn.addEventListener("click", () => deleteTask(task.id));
 
         actions.append(editBtn, deleteBtn);
@@ -586,7 +589,9 @@
 
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
-      themeToggle.textContent = document.body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
+      const dark = document.body.classList.contains("dark");
+      themeToggle.textContent = dark ? "☀️ Light" : "🌙 Dark";
+      themeToggle.setAttribute("aria-label", dark ? "Toggle light mode" : "Toggle dark mode");
       saveTheme();
     });
 
